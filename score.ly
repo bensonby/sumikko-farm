@@ -10,6 +10,8 @@ midiPan = #0.2 % affecting whole midi output, value from -1 to 1
 
 \include "definitions.ly"
 \include "makeOctaves.ly"
+\include "lh.ly"
+\include "rh.ly"
 
 \paper {
     top-margin = 8\mm %-minimum top-margin: 8mm
@@ -42,20 +44,16 @@ midiPan = #0.2 % affecting whole midi output, value from -1 to 1
     } <<
       \new Staff = "up" \with {
       } {
+        \rh
       }
       \new Dynamics = "dynamics" \with {
-        % \override VerticalAxisGroup.staff-affinity = #UP
-        \override VerticalAxisGroup.nonstaff-relatedstaff-spacing = #'(
-          (padding . 0.8)
-        )
-        \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing = #'(
-          (padding . 0.8)
-        )
       } { }
       \new Staff = "down" {
+        \lh
       }
     >>
   >>
   \layout {
   }
+  \midi { }
 }
