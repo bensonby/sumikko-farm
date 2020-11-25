@@ -72,6 +72,7 @@ rhBLow = \relative c' {
   s1*2
   s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
   s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
+  s1*2
 }
 rhC = \relative c' {
   \repeat unfold 2 {
@@ -85,6 +86,26 @@ rhC = \relative c' {
   \tuplet 3/2 4 { <d, bes'>8\( c' d <d, bes'> c' d } <g, d' g>4 \tuplet 3/2 4 { <g d'>8 e' f }
   <g, c f g>4~ \tuplet 3/2 4 { q8 e' d } c2\)
 }
+rhD = \relative c''' {
+  \tuplet 6/4 4 { g16^\pp c a' g f e d c bes a g f e d~ d4~ } \tuplet 3/2 4 { d8 f d }
+  <c, bes' des>1
+  \voiceOne
+  r4 c'' e c'
+  bes2 a
+  \tuplet 3/2 4 { \stemDown a,8 f f \stemUp f d d d bes bes bes g g }
+  \tuplet 3/2 4 {
+    <bes, des gis>4 a'8 q4 a8 q4 f8 <bes, des>4 <a c f>8-.
+  }
+  \oneVoice
+  r4 \tuplet 3/2 4 { b''8 c cis d dis e f fis g }
+  gis4-. <gis,, a gis'>-. q2->--
+}
+rhDVoiceTwo = \relative c'' {
+  \voiceOne
+  s1
+  r2 r4 \tuplet 3/2 4 { r8 e d } \voiceTwo <g, c e>1
+  r2 \tuplet 3/2 4 { r4 g'8 a4 \tuplet 6/4 { bes32 c d e f g } } \tuplet 3/2 4 { \stemUp a8 }
+}
 rh = <<
   \global
   \clef treble
@@ -94,11 +115,14 @@ rh = <<
     \rhATwo
     \rhB
     \rhC
+    \rhD
   } \\
   {
     \rhIntroTwo
     \rhAHighOne
     \rhAHighTwo
     \rhBLow
+    s1*8
+    \rhDVoiceTwo
   }
 >>

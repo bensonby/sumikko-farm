@@ -41,6 +41,7 @@ lhATrill = \relative c' {
   s1*6
   \voiceThree
   r4 f\trill f4-. s4
+  s1
 }
 lhB = \relative c, {
   bes4-. f''-. <bes d>-. \appoggiatura { cis,,,16 d e } f4--
@@ -59,6 +60,21 @@ lhC = \relative c, {
   \makeOctaves 1 { f4-. f-- e-. e-- d-. d-- c-. c-- bes-. bes-- b-. b--}
   << { c'4 c } \\ { c,2 } >> \tuplet 3/2 4 { c'4 bes8 a4 g8 }
 }
+lhD = \relative c''' {
+  \oneVoice
+  r4 \clef treble bes\( d f a2 g\)
+  a,,,1
+  \tuplet 3/2 4 { d8 fis a c ees bes' } a4 \clef bass \tuplet 3/2 4 { bes,,,8 a g }
+  g1
+  <c, c'>4-. q-. q-. \tuplet 3/2 4 { q4-. <f f'>8-. }
+  R1
+  r4 <c c'>4-. q2->--
+}
+lhDVoiceTwo = \relative c'' {
+  \voiceThree
+  s1*2
+  r4 \tuplet 3/2 4 { c8 e g~ } g1
+}
 lh = <<
   \global
   \clef bass
@@ -68,9 +84,12 @@ lh = <<
     \lhATwo
     \lhB
     \lhC
+    \lhD
   } \\
   {
     \lhIntroTwo
     \lhATrill
+    s1*24
+    \lhDVoiceTwo
   }
 >>
