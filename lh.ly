@@ -40,7 +40,7 @@ lhATwo = \relative c, {
 lhATrill = \relative c' {
   s1*6
   \voiceThree
-  r4 f\trill f4-. s4
+  r4 \pitchedTrill f\startTrillSpan ees f4-.\stopTrillSpan s4
   s1
 }
 lhB = \relative c, {
