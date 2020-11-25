@@ -32,7 +32,7 @@ midiPan = #0.2 % affecting whole midi output, value from -1 to 1
 
 \header {
   title = "Opening Title from Sumikkogurashi Farm"
-  arranger = "Transcribed by Benson Yeung"
+  arranger = "Arranged by Benson Yeung"
   % copyright = "https://music.bensonby.me"
   % tagline = "https://music.bensonby.me"
 }
