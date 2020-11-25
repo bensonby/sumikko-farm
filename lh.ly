@@ -42,6 +42,16 @@ lhATrill = \relative c' {
   \voiceThree
   r4 f\trill f4-. s4
 }
+lhB = \relative c, {
+  bes4-. f''-. <bes d>-. \appoggiatura { cis,,,16 d e } f4--
+  bes4-. f''-. <bes d>-. des,,--
+  a4-. a''-. <c e>-. a,,--
+  d4-. <d d'>-- c-. <c c'>--
+  bes4-. f''-. <bes d>-. \appoggiatura { cis,,,16 d e } f4--
+  bes4-. f''-. <bes d>-. des,,--
+  c4-. c-. c-. c-.
+  <des des'>4-- q-- <ees ees'>-- <e e'>--
+}
 lh = <<
   \global
   \clef bass
@@ -49,6 +59,7 @@ lh = <<
     \lhIntroOne
     \lhAOne
     \lhATwo
+    \lhB
   } \\
   {
     \lhIntroTwo

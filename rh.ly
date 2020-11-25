@@ -49,6 +49,29 @@ rhAHighTwo = \relative c'' {
   s1 s2 \tuplet 3/2 4 { \voiceThree \stemUp bes,8( d f } bes4)
   s1*2
   \tuplet 3/2 4 { \stemUp f,8( c')-. c-. \oneVoice des,-. c-. c-. ees,( c)-. c-. ees( d des) }
+  s1
+}
+rhB = \relative c'' {
+  \repeat unfold 2 {
+    \stemNeutral \tuplet 3/2 4 { r8 d-. d-. f4-. g8-. } \stemUp aes4-. \stemNeutral r4
+  }
+  \tuplet 3/2 4 { r8 c, c f4 g8 } c4-. <a, c a'>--
+  <f a g'>4-. <f a f'>-- <e g e'>-. <e g f'>--
+  \repeat unfold 2 {
+    \stemNeutral \tuplet 3/2 4 { r8 d'-. d-. f4-. g8-. } \stemUp aes4-. \stemNeutral r4
+  }
+  \tuplet 3/2 4 {
+    <bes,, d f>4 q8 <c e g>4 q8 <f bes d>4 q8 <g c e>4 q8
+    <aes des f>4 q8 <bes ees g>4 q8 <c f a>4 q8
+  } <e g c>4
+}
+rhBLow = \relative c' {
+  \voiceTwo
+  s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
+  s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
+  s1*2
+  s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
+  s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
 }
 rh = <<
   \global
@@ -57,10 +80,12 @@ rh = <<
     \rhIntroOne
     \rhAOne
     \rhATwo
+    \rhB
   } \\
   {
     \rhIntroTwo
     \rhAHighOne
     \rhAHighTwo
+    \rhBLow
   }
 >>
