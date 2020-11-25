@@ -25,8 +25,8 @@ lhAOne = \relative c, {
   \oneVoice
   \repeat unfold 2 { f4-. <a' c>-. c,,-. q-. }
   \repeat unfold 2 { bes4-. <bes'' d>-. f,-. q-. }
-  f4-. <a' c>-. c,,-. q-. d-. <a'' d>-. a,,-. <d'' fis>-.
-  <aes, ges'>2 r4 \tuplet 3/2 4 { <des, des'>4--( <c c'>8-.) }
+  f4-. <a' c>-. c,,-. q-. d-. <d'' fis>-. a,,-. q-.
+  <aes' ges'>2 r4 \tuplet 3/2 4 { <des, des'>4--( <c c'>8-.) }
   \tuplet 3/2 4 { r4 c'8( } bes4)-. a-. g--
 }
 lhATwo = \relative c, {
