@@ -52,6 +52,13 @@ lhB = \relative c, {
   c4-. c-. c-. c-.
   <des des'>4-- q-- <ees ees'>-- <e e'>--
 }
+lhC = \relative c, {
+  \makeOctaves 1 { f4-. f-- e-. e-- d-. d-- c-. c-- }
+  <bes bes'>4-. \tuplet 3/2 4 { f'4( bes8 a4 bes8 } a4)
+  \makeOctaves 1 { c,4-- des d ees }
+  \makeOctaves 1 { f4-. f-- e-. e-- d-. d-- c-. c-- bes-. bes-- b-. b--}
+  << { c'4 c } \\ { c,2 } >> \tuplet 3/2 4 { c'4 bes8 a4 g8 }
+}
 lh = <<
   \global
   \clef bass
@@ -60,6 +67,7 @@ lh = <<
     \lhAOne
     \lhATwo
     \lhB
+    \lhC
   } \\
   {
     \lhIntroTwo

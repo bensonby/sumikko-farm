@@ -73,6 +73,18 @@ rhBLow = \relative c' {
   s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
   s2 \tuplet 3/2 4 { r8 d-. bes-. } s4
 }
+rhC = \relative c' {
+  \repeat unfold 2 {
+    \tuplet 3/2 4 { <f a>8\( bes c <f, a>8 bes c } <a f'>4 <a c>\)
+  }
+  \tuplet 3/2 4 { <d, bes'>8\( c' d <f, bes> c' d } <f, bes g'>4 <f bes d>\)
+  \tuplet 3/2 4 { <c' e>8 g q <des' f> aes q <d fis> a q } <ees' g>4
+  \repeat unfold 2 {
+    \tuplet 3/2 4 { <f, a>8\( bes c <f, a>8 bes c } <a f'>4 <a c>\)
+  }
+  \tuplet 3/2 4 { <d, bes'>8\( c' d <d, bes'> c' d } <g, d' g>4 \tuplet 3/2 4 { <g d'>8 e' f }
+  <g, c f g>4~ \tuplet 3/2 4 { q8 e' d } c2\)
+}
 rh = <<
   \global
   \clef treble
@@ -81,6 +93,7 @@ rh = <<
     \rhAOne
     \rhATwo
     \rhB
+    \rhC
   } \\
   {
     \rhIntroTwo
