@@ -21,13 +21,21 @@ lhIntroTwo = \relative c' {
   s1 s2 \tuplet 3/2 4 { \stemUp g8( c \cr \stemDown e } g4) \cl
   s1*2
 }
-lhA = \relative c, {
+lhAOne = \relative c, {
   \oneVoice
   \repeat unfold 2 { f4-. <a' c>-. c,,-. q-. }
   \repeat unfold 2 { bes4-. <bes'' d>-. f,-. q-. }
   f4-. <a' c>-. c,,-. q-. d-. <a'' d>-. a,,-. <d'' fis>-.
   <aes, ges'>2 r4 \tuplet 3/2 4 { <des, des'>4--( <c c'>8-.) }
   \tuplet 3/2 4 { r4 c'8( } bes4)-. a-. g--
+}
+lhATwo = \relative c, {
+  \oneVoice
+  f4-. <a' c>-. c,,-. q-. f4-. c''-. c,,-. q-.
+  bes4-. <bes'' d>-. f,-. q-. bes,4-. d''-. f,,-. q-.
+  c4-. <c'' e>-. g,-. q-. c,-. e''-. d,,( e
+  f4)-. \tuplet 3/2 4 { des8-. c-. c-. } r4 \tuplet 3/2 4 { ees8( d des) }
+  r4 ees-. ees2->
 }
 lhATrill = \relative c' {
   s1*6
@@ -39,7 +47,8 @@ lh = <<
   \clef bass
   {
     \lhIntroOne
-    \lhA
+    \lhAOne
+    \lhATwo
   } \\
   {
     \lhIntroTwo

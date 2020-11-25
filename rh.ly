@@ -23,10 +23,32 @@ rhAOne = \relative c'' {
   \tuplet 3/2 4 { ees8 d ees f ees f } aes4-. \tuplet 3/2 4 { <aes, des f>4-- <g c g'>8-. }
   \tuplet 3/2 4 { r4 c8( } bes4)-. a-. g--
 }
-rhAHigh = \relative c'' {
+rhATwo = \relative c'' {
+  <<
+    { a4-. a-. \tuplet 3/2 4 { a4 g8 a4 g8 r4 f8 g4 a8~ } \stemDown a4 r4 \stemNeutral }
+    { c,4-. c-. \tuplet 3/2 4 { c4 bes8 c4 bes8 r4 a8 bes4 c8~ } \stemDown c4 r4 \stemNeutral }
+  >>
+  <<
+    { bes'4-. bes-. \tuplet 3/2 4 { bes4 a8 bes4 a8 r4 g8 a4 bes8~ } \stemDown bes4 r4 \stemNeutral }
+    { d,-. d-. \tuplet 3/2 4 { d4 c8 d4 c8 r4 bes8 c4 d8~ } \stemDown d4 r4 \stemNeutral }
+  >>
+  <<
+    { c'4-. c-. \tuplet 3/2 4 { c4 bes8 c4 bes8 r4 a8 bes4 c8 r4 d8 e4 g8 } f4-. }
+    { e,4-. e-. \tuplet 3/2 4 { e4 d8 e4 d8 r4 c8 d4 e8 r4 f8 g4 bes8 } a4-. }
+  >> s4 s2
+  r4 \acciaccatura d16 <a ees'>4-. \acciaccatura d16 q2->
+}
+rhAHighOne = \relative c'' {
   s1 s2 \tuplet 3/2 4 { \voiceThree \stemUp f8( a c } f4)
   s1 s2 \tuplet 3/2 4 { \voiceThree \stemUp bes,8( d f } bes4)
   s1 s2 \tuplet 3/2 4 { \voiceThree \stemUp d,,8( fis a } d4)
+  s1 s1
+}
+rhAHighTwo = \relative c'' {
+  s1 s2 \tuplet 3/2 4 { \voiceThree \stemUp f8( a c } f4)
+  s1 s2 \tuplet 3/2 4 { \voiceThree \stemUp bes,8( d f } bes4)
+  s1*2
+  \tuplet 3/2 4 { \stemUp f,8( c')-. c-. \oneVoice des,-. c-. c-. ees,( c)-. c-. ees( d des) }
 }
 rh = <<
   \global
@@ -34,9 +56,11 @@ rh = <<
   {
     \rhIntroOne
     \rhAOne
+    \rhATwo
   } \\
   {
     \rhIntroTwo
-    \rhAHigh
+    \rhAHighOne
+    \rhAHighTwo
   }
 >>
