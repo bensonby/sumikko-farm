@@ -64,7 +64,7 @@ lhD = \relative c''' {
   \oneVoice
   r4 \clef treble bes\( d f a2 g\)
   a,,,1
-  \tuplet 3/2 4 { d8 fis a c ees bes' } a4 \clef bass \tuplet 3/2 4 { bes,,,8 a g }
+  \tuplet 3/2 4 { d8 fis a c ees bes'~ } bes4 \clef bass \tuplet 3/2 4 { bes,,,8 a g }
   g1
   <c, c'>4-. q-. q-. \tuplet 3/2 4 { q4-. <f f'>8-. }
   R1

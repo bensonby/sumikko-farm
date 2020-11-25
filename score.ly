@@ -1,6 +1,6 @@
 \version "2.20.0"
 \include "articulate.ly"
-#(set-global-staff-size 17.5)
+#(set-global-staff-size 19)
 
 currentTag = #"print"
 midiPan = #0.2 % affecting whole midi output, value from -1 to 1

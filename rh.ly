@@ -104,7 +104,7 @@ rhDVoiceTwo = \relative c'' {
   \voiceOne
   s1
   r2 r4 \tuplet 3/2 4 { r8 e d } \voiceTwo <g, c e>1
-  r2 \tuplet 3/2 4 { r4 g'8 a4 \tuplet 6/4 { bes32 c d e f g } } \tuplet 3/2 4 { \stemUp a8 }
+  r2 \tuplet 3/2 4 { r4 g'8 a4 \tuplet 6/4 { bes32 c d e f g } } \omit TupletNumber \tuplet 3/2 4 { \stemUp a8 }
 }
 rh = <<
   \global
@@ -116,6 +116,7 @@ rh = <<
     \rhB
     \rhC
     \rhD
+    \bar ":|."
   } \\
   {
     \rhIntroTwo
