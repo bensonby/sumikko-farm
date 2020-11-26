@@ -6,21 +6,15 @@ global = {
 rhIntroOne = \relative c'' {
   \oneVoice
   <a c f>4-. q-. <g c g'>4-. q-.
-  \tuplet 3/2 4 { <a d f>4 q8 r4 <g c e>8~ } q4 \tuplet 3/2 4 { \stemUp r8 f' e }
-  \tuplet 3/2 4 { d8 dis e f fis bes a4 dis,8 e4 f8-. }
-  \oneVoice r4 \stemUp gis32 a gis a gis a gis a \tuplet 3/2 4 { r4 \stemNeutral <c,, des c'>8->~ } q4
-}
-rhIntroTwo = \relative c'' {
-  \voiceTwo
-  s1 s1
-  bes4-- <bes d>-- <bes des f>4-- \tuplet 3/2 4 { <bes des>4-- <a c d>8-. }
-  s1
+  \tuplet 3/2 4 { <a d f>4 q8 r4 <g c e>8~ } q4 \tuplet 3/2 4 { r8 f' e }
+  \tuplet 3/2 4 { <d bes>8 dis e <f d bes> fis bes <a f des bes>4 dis,8 <e des bes>4 <f d c a>8-. }
+  r4 gis32 a gis a gis a gis a \tuplet 3/2 4 { r4 <des,, c'>8->~ } q4
 }
 rhAOne = \relative c'' {
   a4-. a-. \tuplet 3/2 4 { a4 g8 a4 g8 r4 f8 g4 a8~ } \stemDown a4 r4 \stemNeutral
   bes4-. bes-. \tuplet 3/2 4 { bes4 a8 bes4 a8 r4 g8 a4 bes8~ } \stemDown bes4 r4 \stemNeutral
   a4-. a-. \tuplet 3/2 4 { a4 g8 a4 g8 r4 fis8 g4 a8 \stemDown r4 bes8~ bes4 c8 } \stemNeutral
-  \tuplet 3/2 4 { ees8 d ees f ees f } aes4-. \tuplet 3/2 4 { <aes, des f>4-- <g c g'>8-. }
+  \tuplet 3/2 4 { ees8 d ees f ees f } aes4-. \tuplet 3/2 4 { <aes, des f>4-- <g c e g>8-. }
   \tuplet 3/2 4 { r4 c8( } bes4)-. a-. g--
 }
 rhATwo = \relative c'' {
@@ -56,7 +50,7 @@ rhB = \relative c'' {
     \stemNeutral \tuplet 3/2 4 { r8 d-. d-. f4-. g8-. } \stemUp aes4-. \stemNeutral r4
   }
   \tuplet 3/2 4 { r8 c, c f4 g8 } c4-. <a, c a'>--
-  <f a g'>4-. <f a f'>-- <e g e'>-. <e g f'>--
+  <\tweak font-size #-2 f a g'>4-. <f a f'>-- <e g e'>-. <\tweak font-size #-2 e g f'>--
   \repeat unfold 2 {
     \stemNeutral \tuplet 3/2 4 { r8 d'-. d-. f4-. g8-. } \stemUp aes4-. \stemNeutral r4
   }
@@ -78,7 +72,7 @@ rhC = \relative c' {
   \repeat unfold 2 {
     \tuplet 3/2 4 { <f a>8\( bes c <f, a>8 bes c } <a f'>4 <a c>\)
   }
-  \tuplet 3/2 4 { <d, bes'>8\( c' d <f, bes> c' d } <f, bes g'>4 <f bes d>\)
+  \tuplet 3/2 4 { <d, bes'>8\( c' d q c d } <f, bes g'>4 <f bes d>\)
   \tuplet 3/2 4 { <c' e>8 g q <des' f> aes q <d fis> a q } <ees' g>4
   \repeat unfold 2 {
     \tuplet 3/2 4 { <f, a>8\( bes c <f, a>8 bes c } <a f'>4 <a c>\)
@@ -104,7 +98,7 @@ rhDVoiceTwo = \relative c'' {
   \voiceOne
   s1
   r2 r4 \tuplet 3/2 4 { r8 e d } \voiceTwo <g, c e>1
-  r2 \tuplet 3/2 4 { r4 g'8 a4 \tuplet 6/4 { bes32 c d e f g } } \omit TupletNumber \tuplet 3/2 4 { \stemUp a8 }
+  r2 \tuplet 3/2 4 { r4 g'8 } \afterGrace a4 { bes16 c d e f g } \omit TupletNumber \tuplet 3/2 4 { \stemUp a8 }
 }
 rh = <<
   \global
@@ -119,7 +113,7 @@ rh = <<
     \bar ":|."
   } \\
   {
-    \rhIntroTwo
+    s1*4
     \rhAHighOne
     \rhAHighTwo
     \rhBLow

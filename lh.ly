@@ -5,20 +5,13 @@ global = {
 }
 lhIntroOne = \relative c {
   \oneVoice
-  \tuplet 3/2 4 {
-    \repeat unfold 2 { f4-. f'8-. }
-    \repeat unfold 2 { e,4-. e'8-. }
-    d,4-. d8-. d'4-. <c, c'>8->~
-  }
-  q2
-  \tuplet 3/2 4 {
-    \repeat unfold 2 { bes4-. bes'8-. }
-    c,4-. c'8-. <c, c'>4-- <f, f'>8-.
-  }
-  r4 \cr \stemDown \tuplet 7/4 { gis''16 a gis a gis a gis } \tuplet 3/2 4 { a4 \cl c,,8~-> } c4
+  \makeOctaves 1 { f4-. f-. e-. e-. }
+  \makeOctaves 1 { \tuplet 3/2 4 { d4-- d8-. r4 c8~ } c2 }
+  \makeOctaves 1 { bes4-. bes-. c-. \tuplet 3/2 4 { c4-- f,8-. } }
+  r4 \tuplet 7/4 { gis''16 a gis a gis a gis } \tuplet 3/2 4 { a4 <c,, c'>8~-> } q4
 }
 lhIntroTwo = \relative c' {
-  s1 s2 \tuplet 3/2 4 { \stemUp g8( c \cr \stemDown e } g4) \cl
+  s1 s2 \tuplet 3/2 4 { \voiceThree g8( c e } \stemDown g4)
   s1*2
 }
 lhAOne = \relative c, {
@@ -31,14 +24,18 @@ lhAOne = \relative c, {
 }
 lhATwo = \relative c, {
   \oneVoice
-  f4-. <a' c>-. c,,-. q-. f4-. c''-. c,,-. q-.
-  bes4-. <bes'' d>-. f,-. q-. bes,4-. d''-. f,,-. q-.
-  c4-. <c'' e>-. g,-. q-. c,-. e''-. d,,( e
+  f4-. \parenthesizeSize <a' \parenthesize c>-. c,,-. \parenthesizeSize q-. f4-. c''-. c,,-. <a'' c>-.
+  bes,,4-. \parenthesizeSize <bes'' \parenthesize d>-. f,-. \parenthesizeSize q-. bes,4-. d''-. f,,-. <bes' d>-.
+  c,,4-. \parenthesizeSize <c'' \parenthesize e>-. g,-. \parenthesizeSize q-. c,-. e''-. d,,( e
   f4)-. \tuplet 3/2 4 { des8-. c-. c-. } r4 \tuplet 3/2 4 { ees8( d des) }
   r4 ees-. ees2->
 }
 lhATrill = \relative c' {
-  s1*6
+  s1*5 s2
+  \ignoreNoteCollision
+  \hideNotes
+  \voiceFollowerA
+  \showStaffSwitch a,,4*2/3 \cr bes'''8*2/3 \voiceFollowerB \cl <d, fis>4-. \unHideNotes
   \voiceThree
   r4 \pitchedTrill f\startTrillSpan ees f4-.\stopTrillSpan s4
   s1

@@ -12,6 +12,7 @@ rhMark = \markup {
 lhMark = \markup { 
   \path #0.1 #'((moveto 0 1)(rlineto -0.5 0)(rlineto 0 -1.5))
 }
+ignoreNoteCollision = \override NoteColumn.ignore-collision = ##t
 conPedal = \markup \italic \larger "con pedal"
 sim = \markup \italic \larger "sim."
 cresc = \markup \italic \larger "cresc."
@@ -79,6 +80,10 @@ metronomePaddingA = \once \override Score.MetronomeMark.padding = #11.5
 metronomePaddingB = \once \override Score.MetronomeMark.padding = #4
 metronomePaddingC = \once \override Score.MetronomeMark.padding = #6
 metronomePaddingD = \once \override Score.MetronomeMark.padding = #2
+parenthesizeSize = {
+  \once \override ParenthesesItem.padding = #0.5
+  \once \override ParenthesesItem.font-size = #-6
+}
 pedalOffsetA = \once \override Score.SustainPedalLineSpanner.padding = #1.65
 subPAccelAndCrescSpanner = {
   \override TextSpanner #'(bound-details left text) = \markup \whiteout { \concat { \italic \larger "sub. " \dynamic "p" \italic \larger " accel. e cresc." } }
@@ -100,13 +105,13 @@ voiceFollowerA = {
     (right
       (attach-dir . -1)
       (end-on-accidental . #t)
-      (padding . 3.8)
-      (Y . 4)
+      (padding . 1.8)
+      (Y . 0)
     )
     (left
       (attach-dir . 1)
-      (padding . 3.8)
-      (Y . -9.5)
+      (padding . 1.8)
+      (Y . -15.5)
     )
   )
 }
@@ -123,7 +128,7 @@ voiceFollowerB = {
     (left
       (attach-dir . 1)
       (padding . 0.5)
-      (Y . 9.5)
+      (Y . 12.5)
     )
   )
 }
