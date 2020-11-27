@@ -59,9 +59,9 @@ lhC = \relative c, {
 }
 lhD = \relative c''' {
   \oneVoice
-  r4 \clef treble bes\( d f a2 g\)
+  r4 \clef treble \ottava #1 bes\(\mp d f a2 g\) \ottava #0
   a,,,1
-  \tuplet 3/2 4 { d8 fis a c ees bes'~ } bes4 \clef bass \tuplet 3/2 4 { bes,,,8( a g) }
+  \tuplet 3/2 4 { d8\( fis a c ees bes'~ } bes4\) \clef bass \tuplet 3/2 4 { bes,,,8( a g) }
   g1
   <c, c'>4-.-> q-.-> q-.-> \tuplet 3/2 4 { q4-.-> <f f'>8-.-> }
   R1
@@ -70,7 +70,7 @@ lhD = \relative c''' {
 lhDVoiceTwo = \relative c'' {
   \voiceThree
   s1*2
-  r4 \tuplet 3/2 4 { c8 e g~ } g1
+  r4 \tuplet 3/2 4 { c8( e g~ } g1)
 }
 lh = <<
   \global

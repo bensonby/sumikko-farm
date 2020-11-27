@@ -37,6 +37,16 @@ midiPan = #0.2 % affecting whole midi output, value from -1 to 1
   % tagline = "https://music.bensonby.me"
 }
 
+dynamics = {
+  s1\mf s1*3
+  s1*16
+  s1\mp s1 s2. s4\mf s1
+  s1\mp s1 s1_\cresc s1
+  s1\f s1*6 s1_\dim
+  s1*3 s2 s2_\cresc
+  s1\mf s1 s4 s2.\mp
+}
+
 \score {
   \new StaffGroup <<
     \new PianoStaff \with {
@@ -47,7 +57,7 @@ midiPan = #0.2 % affecting whole midi output, value from -1 to 1
         \rh
       }
       \new Dynamics = "dynamics" \with {
-      } { }
+      } { \dynamics }
       \new Staff = "down" {
         \lh
       }

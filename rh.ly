@@ -84,20 +84,21 @@ rhD = \relative c''' {
   \tuplet 6/4 4 { g16^\pp\( c a' g f e d c bes a g f e d~ d4~ } \tuplet 3/2 4 { d8 f d }
   <c, bes' des>1\)
   \voiceOne
-  r4 c''\( e c'
-  bes2 a\)
-  \tuplet 3/2 4 { \stemDown a,8\( f f \oneVoice f d d d bes bes bes g g\) }
+  r4 \ottava #1 c''\( e c'
+  bes2 a\) \ottava #0 % do it at second voice instead
+  \tupletDown \tuplet 3/2 4 { \stemDown a,8( f) f-. }
+  \tupletNeutral \oneVoice \tuplet 3/2 4 { f( d) d-. d( bes) bes-. bes( g) g-. }
   \tuplet 3/2 4 {
     <bes, des gis>4\(-> a'8 q4-> a8 q4-> f8 <bes, des>4-> <a c f>8-.->\)
   }
   r4 \tuplet 3/2 4 { b''8\(-. c-. cis-. d-. dis-. e-. f-. fis-. g-. }
-  gis4-.\) <gis,, a gis'>-. q2->--
+  gis4-.\) <gis,,-2 a-1 gis'-5>-. q2->--
 }
 rhDVoiceTwo = \relative c'' {
   \voiceOne
   s1
-  r2 r4 \tuplet 3/2 4 { r8 e( d } \voiceTwo <g, c e>1)
-  r2 \tuplet 3/2 4 { r4 g'8\( } \afterGrace a4 { bes16 c d e f g } \omit TupletNumber \tuplet 3/2 4 { \stemUp a8\) }
+  r2 r4 \tuplet 3/2 4 { r8 e_( d } \voiceTwo <g, c e>1)
+  r2 \tuplet 3/2 4 { r4 \ottava #0 g'8\( } \afterGrace a4 { bes16 c d-1 e f g } \omit TupletNumber \tuplet 3/2 4 { \stemUp a8\) }
 }
 rh = <<
   \global
