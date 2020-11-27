@@ -4,26 +4,39 @@
 % https://www.youtube.com/watch?v=jaSJBMzRVVE
 % Youtube Soundtrack
 
+\include "boldTenuto.ly"
 \include "definitions.ly"
 \include "makeOctaves.ly"
 \include "lh.ly"
 \include "rh.ly"
 
 \paper {
-    top-margin = 8\mm %-minimum top-margin: 8mm
+    % top-margin = 10\mm %-minimum top-margin: 8mm
     top-markup-spacing.basic-distance = #3 %-dist. from bottom of top margin to the first markup/title
     markup-system-spacing.basic-distance = #12 %-dist. from header/title to first system
-    top-system-spacing.basic-distance = #12 %-dist. from top margin to system in pages with no titles
-    last-bottom-spacing.basic-distance = #14 %-pads music from copyright block
+    top-system-spacing.basic-distance = #16 %-dist. from top margin to system in pages with no titles
+    last-bottom-spacing.basic-distance = #4 %-pads music from copyright block
 
     % print-all-headers = ##t
     % footnote-separator-markup = ##f
-    oddFooterMarkup = \markup {
+    evenHeaderMarkup = \markup {
+      \column {
+        \fill-line {
+          \line { }
+          \line {
+            \vspace #2
+            \on-the-fly \print-page-number-check-first
+            \fromproperty #'page:page-number-string
+          }
+        }
+      }
+    }
+    evenFooterMarkup = \markup {
       \fill-line {
         "https://music.bensonby.me"
       }
     }
-    evenFooterMarkup = \oddFooterMarkup
+    % evenFooterMarkup = \oddFooterMarkup
 }
 
 \header {
@@ -79,6 +92,10 @@ pedal = {
     >>
   >>
   \layout {
+		\context {
+			\Voice
+			\override Script.stencil = #bold-tenuto-script-stencil
+		}
   }
   \midi { }
 }

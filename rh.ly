@@ -89,10 +89,10 @@ rhD = \relative c''' {
   \tupletDown \tuplet 3/2 4 { \stemDown a,8( f) f-. }
   \tupletNeutral \oneVoice \tuplet 3/2 4 { f( d) d-. d( bes) bes-. bes( g) g-. }
   \tuplet 3/2 4 {
-    <bes, des gis>4^(---> a'8) q4->--^( a8) q4->--^( f8) <bes, des>4->--^( <a c f>8-.->)
+    <bes, des gis>4^(-> a'8) q4->^( a8) q4->^( f8) <bes, des>4->^( <a c f>8-.->)
   }
   r4 \tuplet 3/2 4 { b''8\(-. c-. cis-. d-. dis-. e-. f-. fis-. g-. }
-  gis4-.\) <gis,, a gis'>-. q2->--
+  gis4-.\) <gis,, a gis'>-. q2--->
 }
 rhDVoiceTwo = \relative c'' {
   \voiceOne
