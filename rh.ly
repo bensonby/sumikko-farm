@@ -81,10 +81,10 @@ rhC = \relative c' {
   <g, c f g>4~ \tuplet 3/2 4 { q8 e' d } c2\)
 }
 rhD = \relative c''' {
-  \tuplet 6/4 4 { g16^\pp\( c a' g f e d c bes a g f e d~ d4~ } \tuplet 3/2 4 { d8 f d }
+  \tuplet 6/4 4 { \dynamicShiftH \shpSlurA g16^\pp\( c a' g f e d c bes a g f e d~ d4~ } \tuplet 3/2 4 { d8\) \shpSlurB f\( d }
   <c, bes' des>1\)
   \voiceOne
-  r4 \ottava #1 c''\(^\mp e c'
+  r4 \ottavaSpacingB \ottava #1 \shpSlurC c''\(^\mp e c'
   bes2 a\) \ottava #0 % do it at second voice instead
   \tupletDown \tuplet 3/2 4 { \stemDown a,8( f) f-. }
   \tupletNeutral \oneVoice \tuplet 3/2 4 { f( d) d-. d( bes) bes-. bes( g) g-. }
@@ -98,7 +98,7 @@ rhDVoiceTwo = \relative c'' {
   \voiceOne
   s1
   r2 r4 \tuplet 3/2 4 { r8 e_( d } \voiceTwo <g, c e>1)
-  r2 \tuplet 3/2 4 { r4 \ottava #0 g'8\( } \afterGrace a4 { bes16 c d e f g } \omit TupletNumber \tuplet 3/2 4 { \stemUp a8\) }
+  g'2\rest \tuplet 3/2 4 { g4\rest \ottava #0 g8^\( } \afterGrace a4 { bes16 c d e f g } \omit TupletNumber \tuplet 3/2 4 { \stemUp a8\) }
 }
 rh = <<
   \metronomePaddingB

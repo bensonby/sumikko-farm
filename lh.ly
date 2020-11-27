@@ -59,7 +59,8 @@ lhC = \relative c, {
 }
 lhD = \relative c''' {
   \oneVoice
-  r4 \clef treble \ottava #1 bes\(\mp d f a2 g\) \ottava #0
+  r4 \clef treble \ottavaSpacingA
+  \ottava #1 \shpSlurD bes\(\mp d f a2 g\) \ottava #0
   a,,,1
   \tuplet 3/2 4 { d8\( fis a c ees bes'~ } bes4\) \clef bass \tuplet 3/2 4 { bes,,,8( a g) }
   g1

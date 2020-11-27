@@ -23,6 +23,8 @@ fpCresc = \markup \concat { \dynamic "fp" \italic \larger "  cresc." }
 beginSlowlyThenAccel = \markup \whiteout { \concat { \dynamic "sfp" \italic "  begin slowly, then ease into tempo" } }
 ottava-one-short = \set Staff.ottavation = #"8"
 ottavaShorterEndA = \once \override Score.OttavaBracket.shorten-pair = #'(0 . 0)
+ottavaSpacingA = \once \override Score.OttavaBracket.padding = #2
+ottavaSpacingB = \once \override Score.OttavaBracket.padding = #3
 attacaA = {
   \once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
   \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
@@ -61,8 +63,9 @@ dynamicShiftD = \once \override DynamicText.Y-offset = #-4
 dynamicShiftE = \once \override DynamicText.Y-offset = #-2.5
 dynamicShiftF = \once \override Dynamics.DynamicText.self-alignment-X = #-0.4 % for overlap on the left with barline
 dynamicShiftG = \once \override DynamicText.Y-offset = #-7
-dynamicShiftH = \once \override DynamicText.extra-offset = #'(0.35 . 0.9)
+dynamicShiftH = \once \override DynamicText.extra-offset = #'(-2.2 . -2.9)
 dynamicShiftI = \once \override DynamicText.Y-offset = #-5.5
+dynamicShiftJ = \once \override DynamicText.Y-offset = #-6
 hairpinA = \once \override Hairpin.Y-offset = #-2
 hairpinB = \once \override Hairpin.Y-offset = #-1.4
 paddingA = \once \override Script.padding = #0.6
@@ -147,10 +150,10 @@ glissandoA = \once \override Glissando.bound-details = #'(
     (padding . 1.2)
   )
 )
-shpSlurA = \shape #'((0.2 . 0.5) (0 . 0.5) (0 . 0.5) (0 . 0.5)) PhrasingSlur
-shpSlurB = \shape #'((0 . 0) (0 . 0.5) (0 . 0.5) (0 . 0.5)) PhrasingSlur
-shpSlurC = \shape #'((0 . 0.2) (0 . 0.6) (0 . 0.3) (0 . 0.5)) PhrasingSlur
-shpSlurD = \shape #'((0 . 0.2) (0 . 1.9) (0 . 1.5) (0 . 0.0)) PhrasingSlur
+shpSlurA = \shape #'((0 . -1.5) (0 . 2.2) (0 . 0) (-0.2 . -1.5)) PhrasingSlur
+shpSlurB = \shape #'((0 . 0) (0 . -0.4) (0 . -0.4) (-0.8 . 0)) PhrasingSlur
+shpSlurC = \shape #'((0 . -1) (0 . 0.6) (0 . 0.3) (0 . -0.3)) PhrasingSlur
+shpSlurD = \shape #'((0 . 0.2) (0 . 0.9) (0 . 0.5) (0 . 0.3)) PhrasingSlur
 
 % default accent in midi adds 20 to velocity which is too much
 % ly/script-init.ly

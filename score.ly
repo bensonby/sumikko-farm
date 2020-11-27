@@ -57,7 +57,7 @@ dynamics = {
   s1\f s1*6 s1_\dim
   s1 s2. s4*1/3 s4*2/3\p s1 s2. s4_\cresc
   \dynamicShiftG
-  s1\mf s1 s4 \dynamicShiftI s2.\mp
+  s1\mf s1 s4 \dynamicShiftI s2.\mp s4 \dynamicShiftJ s2.\mf
 }
 pedal = {
   \set Staff.pedalSustainStyle = #'bracket
@@ -69,20 +69,21 @@ pedal = {
   % add the pedal marks in left hand directly
   s1*8 % B without pedal
   s1*7 s2\son s2\soff % C
-  s1*8 % D
+  s1*2 s1\son s2\soff\son s4*2/3 s4*1/3\soff s4 s1*4 % D
 }
 
 \score {
   \new StaffGroup <<
     \new PianoStaff \with {
       instrumentName = #"Piano"
+      \override StaffGrouper.staff-staff-spacing = #'(
+        (padding . 1.7)
+      )
     } <<
-      \new Staff = "up" \with {
-      } {
+      \new Staff = "up" {
         \rh
       }
-      \new Dynamics = "dynamics" \with {
-      } { \dynamics }
+      \new Dynamics = "dynamics" { \dynamics }
       \new Staff = "down" {
         <<
           { \lh }
