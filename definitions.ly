@@ -13,6 +13,7 @@ lhMark = \markup {
   \path #0.1 #'((moveto 0 1)(rlineto -0.5 0)(rlineto 0 -1.5))
 }
 ignoreNoteCollision = \override NoteColumn.ignore-collision = ##t
+trillNotTogether = \markup \italic \larger "trill not together"
 conPedal = \markup \italic \larger "con pedal"
 sim = \markup \italic \larger "sim."
 cresc = \markup \italic \larger "cresc."
