@@ -41,12 +41,12 @@ lhATrill = \relative c' {
   s1
 }
 lhB = \relative c, {
-  bes4-. f''-. <bes d>-. \appoggiatura { cis,,,16 d e } f4--
-  bes4-. f''-. <bes d>-. des,,--
+  bes4-. f''-. <bes d>-. \appoggiatura { cis,,,16\son d e } f4->
+  bes4-.\soff f''-. <bes d>-. des,,--
   a4-. a''-. <c e>-. a,,--(
   d4-.) <d d'>--( c-.) <c c'>--
-  bes4-. f''-. <bes d>-. \appoggiatura { cis,,,16 d e } f4--
-  bes4-. f''-. <bes d>-. des,,--
+  bes4-. f''-. <bes d>-. \appoggiatura { cis,,,16\son d e } f4->
+  bes4-.\soff f''-. <bes d>-. des,,--
   c4-. c-. c-. c-.
   <des des'>4-- q-- <ees ees'>-- <e e'>--
 }
@@ -63,7 +63,7 @@ lhD = \relative c''' {
   a,,,1
   \tuplet 3/2 4 { d8\( fis a c ees bes'~ } bes4\) \clef bass \tuplet 3/2 4 { bes,,,8( a g) }
   g1
-  <c, c'>4-.-> q-.-> q-.-> \tuplet 3/2 4 { q4-.-> <f f'>8-.-> }
+  <c, c'>4---> q---> q---> \tuplet 3/2 4 { q4--->( <f f'>8-.->) }
   R1
   r4 <c c'>4-. q2->--
 }
@@ -75,6 +75,7 @@ lhDVoiceTwo = \relative c'' {
 lh = <<
   \global
   \clef bass
+  \override Script.padding = #0.3
   {
     \lhIntroOne
     \lhAOne

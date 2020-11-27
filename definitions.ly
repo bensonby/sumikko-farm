@@ -13,7 +13,7 @@ lhMark = \markup {
   \path #0.1 #'((moveto 0 1)(rlineto -0.5 0)(rlineto 0 -1.5))
 }
 ignoreNoteCollision = \override NoteColumn.ignore-collision = ##t
-trillNotTogether = \markup \italic \larger "trills not together"
+trillNotTogether = \markup \italic \larger "not aligned"
 conPedal = \markup \italic \larger "con pedal"
 sim = \markup \italic \larger "sim."
 cresc = \markup \italic \larger "cresc."
@@ -57,21 +57,23 @@ instructionII = {
 dynamicShiftA = \once \override DynamicText.X-offset = #-3
 dynamicShiftB = \once \override DynamicText.X-offset = #-2
 dynamicShiftC = \once \override Dynamics.DynamicText.self-alignment-X = #-0.2 % for overlap on the left with barline
-dynamicShiftD = \once \override DynamicText.Y-offset = #-0.8
-dynamicShiftE = \once \override DynamicText.Y-offset = #-7
+dynamicShiftD = \once \override DynamicText.Y-offset = #-4
+dynamicShiftE = \once \override DynamicText.Y-offset = #-2.5
 dynamicShiftF = \once \override Dynamics.DynamicText.self-alignment-X = #-0.4 % for overlap on the left with barline
-dynamicShiftG = \once \override DynamicText.Y-offset = -2
+dynamicShiftG = \once \override DynamicText.Y-offset = #-7
 dynamicShiftH = \once \override DynamicText.extra-offset = #'(0.35 . 0.9)
+dynamicShiftI = \once \override DynamicText.Y-offset = #-5.5
 hairpinA = \once \override Hairpin.Y-offset = #-2
 hairpinB = \once \override Hairpin.Y-offset = #-1.4
 paddingA = \once \override Script.padding = #0.6
 paddingB = \once \override Script.padding = #0.4
 paddingC = \once \override Script.padding = #0.3
+paddingPermanentC = \override Script.padding = #0.25
 offsetA = {
   \once \override Script.X-offset = #0.2
   \once \override Script.padding = #0.4
 }
-textScriptShiftA = \once \override TextScript.extra-offset = #'(0 . 1.4)
+textScriptShiftA = \once \override TextScript.extra-offset = #'(0 . -1.5)
 textScriptShiftB = \once \override TextScript.extra-offset = #'(0 . 0.5)
 textScriptShiftC = \once \override TextScript.extra-offset = #'(0 . -0.5)
 textScriptShiftD = \once \override TextScript.extra-offset = #'(0 . 0.0)
