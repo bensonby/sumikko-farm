@@ -81,16 +81,9 @@ pedal = {
         (padding . 1.7)
       )
     } <<
-      \new Staff = "up" {
-        \rh
-      }
+      \new Staff = "up" { \rh }
       \new Dynamics = "dynamics" { \dynamics }
-      \new Staff = "down" {
-        <<
-          { \lh }
-          { \pedal }
-        >>
-      }
+      \new Staff = "down" { << { \lh } { \pedal } >> }
     >>
   >>
   \layout {
@@ -100,4 +93,46 @@ pedal = {
 		}
   }
   \midi { }
+}
+
+\book {
+  \bookOutputSuffix "mini"
+  #(set! paper-alist (cons '("snippet" . (cons (* 150 mm) (* 110 mm))) paper-alist))
+  \header {
+    title = "Sumikkogurashi Farm - Main Theme"
+    subtitle = ""
+  }
+  \paper {
+    #(set-paper-size "snippet")
+    indent = 0
+    tagline = ##f
+    print-all-headers = ##f
+    evenHeaderMarkup = ##f
+    oddHeaderMarkup = ##f
+    evenFooterMarkup = ##f
+    oddFooterMarkup = ##f
+    top-margin = 1\mm
+    top-markup-spacing.basic-distance = #1 %-dist. from bottom of top margin to the first markup/title
+    markup-system-spacing.basic-distance = #2 %-dist. from header/title to first system
+    top-system-spacing.basic-distance = #1 %-dist. from top margin to system in pages with no titles
+    system-system-spacing.basic-distance = #1 %-dist. from top margin to system in pages with no titles
+    last-bottom-spacing.basic-distance = #1 %-pads music from copyright block
+  }
+
+  \score {
+    \new StaffGroup <<
+      \new PianoStaff <<
+        \new Staff = "up" { \removeWithTag #'print \rh }
+        \new Dynamics = "dynamics" { \removeWithTag #'print \dynamics }
+        \new Staff = "down" { << { \removeWithTag #'print \lh } { \removeWithTag #'print \pedal } >> }
+      >>
+    >>
+    \layout {
+      % #(layout-set-staff-size 14)
+      \context {
+        \Voice
+        \override Script.stencil = #bold-tenuto-script-stencil
+      }
+    }
+  }
 }

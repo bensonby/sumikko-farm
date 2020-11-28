@@ -62,7 +62,7 @@ dynamicShiftC = \once \override Dynamics.DynamicText.self-alignment-X = #-0.2 % 
 dynamicShiftD = \once \override DynamicText.Y-offset = #-4
 dynamicShiftE = \once \override DynamicText.Y-offset = #-2.5
 dynamicShiftF = \once \override Dynamics.DynamicText.self-alignment-X = #-0.4 % for overlap on the left with barline
-dynamicShiftG = \once \override DynamicText.Y-offset = #-7
+dynamicShiftG = \tag #'print { \once \override DynamicText.Y-offset = #-7 }
 dynamicShiftH = \once \override DynamicText.extra-offset = #'(-2.2 . -2.9)
 dynamicShiftI = \once \override DynamicText.Y-offset = #-5.5
 dynamicShiftJ = \once \override DynamicText.Y-offset = #-6
@@ -86,7 +86,7 @@ textScriptShiftE = \once \override TextScript.extra-offset = #'(0 . 0.3)
 textScriptShiftF = \once \override TextScript.extra-offset = #'(0 . -0.6)
 fingeringA = \once \override Fingering.extra-offset = #'(0 . -0.2)
 metronomePaddingA = \once \override Score.MetronomeMark.padding = #11.5
-metronomePaddingB = \once \override Score.MetronomeMark.padding = #4
+metronomePaddingB = \tag #'print { \once \override Score.MetronomeMark.padding = #4 }
 metronomePaddingC = \once \override Score.MetronomeMark.padding = #6
 metronomePaddingD = \once \override Score.MetronomeMark.padding = #2
 parenthesizeSize = {
