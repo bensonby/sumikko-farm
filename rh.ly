@@ -13,7 +13,7 @@ rhIntroOne = \relative c'' {
 rhAOne = \relative c'' {
   a4-. a-. \tuplet 3/2 4 { a4( g8 a4 g8) r4 f8_( g4 a8~ } \stemDown a4) r4 \stemNeutral
   bes4-. bes-. \tuplet 3/2 4 { bes4_( a8 bes4 a8) r4 g8_( a4 bes8~ } \stemDown bes4) r4 \stemNeutral
-  a4-. a-. \tuplet 3/2 4 { a4( g8 a4 g8) r4 fis8( g4 a8) \stemDown r4 bes8~\( bes4 c8 } \stemNeutral
+  a4-. a-. \tuplet 3/2 4 { a4( g8 a4 g8) r4 fis8( g4 a8) \stemDown r4 \shpSlurE bes8~\( bes4 c8 } \stemNeutral
   \tuplet 3/2 4 { ees8 d ees f ees f } aes4-.\) \tuplet 3/2 4 { <aes, des f>4--( <g c e g>8-.) }
   \tuplet 3/2 4 { r4 c8( } bes4)-. a-. g--
 }
@@ -50,7 +50,7 @@ rhB = \relative c'' {
     \oneVoice \tuplet 3/2 4 { r8 d-.( d-. f4-. g8-. } \stemUp aes4-.) \stemNeutral r4
   }
   \tuplet 3/2 4 { r8 c,-.( c-. f4-. g8-. } c4-.) <a, c a'>--(
-  <\tweak font-size #-2 f a g'>4-.) <f a f'>--( <e g e'>-.) <\tweak font-size #-2 e g f'>--
+  <f a g'>4-.) <f a f'>--( <e g e'>-.) <e g f'>--
   \repeat unfold 2 {
     \stemNeutral \tuplet 3/2 4 { r8 d'-.( d-. f4-. g8-. } \stemUp aes4-.) \stemNeutral r4
   }
@@ -81,7 +81,8 @@ rhC = \relative c' {
   <g, c f g>4~ \tuplet 3/2 4 { q8 e' d } c2\)
 }
 rhD = \relative c''' {
-  \tuplet 6/4 4 { \dynamicShiftH \shpSlurA g16^\pp\( c a' g f e d c bes a g f e d~ d4~ } \tuplet 3/2 4 { d8\) \shpSlurB f\( d }
+  \tupletShiftA \tuplet 6/4 4 { \dynamicShiftH \shpSlurA g16^\pp\( c a' g f e }
+  \tupletShiftB \tuplet 6/4 4 { d c bes a g f e d~ d4~ } \tuplet 3/2 4 { d8\) \shpSlurB f\( d }
   <c, bes' des>1\)
   \voiceOne
   r4 \ottavaSpacingB \ottava #1 \shpSlurC c''\(^\mp e c'
@@ -89,7 +90,7 @@ rhD = \relative c''' {
   \tupletDown \tuplet 3/2 4 { \stemDown a,8( f) f-. }
   \tupletNeutral \oneVoice \tuplet 3/2 4 { f( d) d-. d( bes) bes-. bes( g) g-. }
   \tuplet 3/2 4 {
-    <bes, des gis>4^(-> a'8) q4->^( a8) q4->^( f8) <bes, des>4->^( <a c f>8-.->)
+    <bes, des gis>4(-> a'8) q4->( a8) q4->( f8) <bes, des>4->( <a c f>8-.->)
   }
   r4 \tuplet 3/2 4 { b''8\(-. c-. cis-. d-. dis-. e-. f-. fis-. g-. }
   gis4-.\) <gis,, a gis'>-. q2--->

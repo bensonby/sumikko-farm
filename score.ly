@@ -14,7 +14,7 @@
     % top-margin = 10\mm %-minimum top-margin: 8mm
     top-markup-spacing.basic-distance = #3 %-dist. from bottom of top margin to the first markup/title
     markup-system-spacing.basic-distance = #12 %-dist. from header/title to first system
-    top-system-spacing.basic-distance = #16 %-dist. from top margin to system in pages with no titles
+    top-system-spacing.basic-distance = #18 %-dist. from top margin to system in pages with no titles
     last-bottom-spacing.basic-distance = #4 %-pads music from copyright block
 
     % print-all-headers = ##t
@@ -40,7 +40,8 @@
 }
 
 \header {
-  title = "Opening Title from Sumikkogurashi Farm"
+  title = "Sumikkogurashi Farm"
+  subtitle = "Main Theme"
   arranger = "Arranged by Benson Yeung"
   % copyright = "https://music.bensonby.me"
   % tagline = "https://music.bensonby.me"

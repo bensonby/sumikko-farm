@@ -55,7 +55,7 @@ lhC = \relative c, {
   <bes bes'>4-.) \tuplet 3/2 4 { f'4( bes8 a4 bes8 } a4)
   \makeOctaves 1 { c,4-- des-- d-- ees-- }
   \makeOctaves 1 { f4-. f--( e-.) e--( d-.) d--( c-.) c--( bes-.) bes-- b-- b--}
-  << { c'4 c } \\ { c,2 } >> \tuplet 3/2 4 { c'4( bes8 a4 g8) }
+  << { c'4 c } \\ { c,2 } >> \tuplet 3/2 4 { c'4_( bes8 a4 g8) }
 }
 lhD = \relative c''' {
   \oneVoice
@@ -66,7 +66,7 @@ lhD = \relative c''' {
   g1
   <c, c'>4-> q-> q-> \tuplet 3/2 4 { q4->( <f f'>8-.->) }
   R1
-  r4 <c c'>4-. q2->
+  r4 <c c'>4-. q2--->
 }
 lhDVoiceTwo = \relative c'' {
   \voiceThree
