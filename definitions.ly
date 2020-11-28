@@ -64,8 +64,8 @@ dynamicShiftE = \once \override DynamicText.Y-offset = #-2.5
 dynamicShiftF = \once \override Dynamics.DynamicText.self-alignment-X = #-0.4 % for overlap on the left with barline
 dynamicShiftG = \tag #'print { \once \override DynamicText.Y-offset = #-7 }
 dynamicShiftH = \once \override DynamicText.extra-offset = #'(-2.2 . -2.9)
-dynamicShiftI = \once \override DynamicText.Y-offset = #-5.5
-dynamicShiftJ = \once \override DynamicText.Y-offset = #-6
+dynamicShiftI = \tag #'print { \once \override DynamicText.Y-offset = #-5.5 }
+dynamicShiftJ = \tag #'print { \once \override DynamicText.Y-offset = #-6 }
 tupletShiftA = \once \override TupletNumber.Y-offset = #-1.9
 tupletShiftB = \once \override TupletNumber.Y-offset = #-1.95
 hairpinA = \once \override Hairpin.Y-offset = #-2

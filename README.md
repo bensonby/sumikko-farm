@@ -13,7 +13,7 @@ Warning: https://stackoverflow.com/questions/52998331/imagemagick-security-polic
 
 ```
 mkdir images
-convert -density 300 -background white -alpha remove score-mini.pdf images/output.png
+convert -density 100 score-mini.pdf images/output.png
 # generated images/output-0.png, output-1.png, etc.
 ```
 
@@ -45,28 +45,10 @@ ffmpeg -i output.mp4 \
 [x][10:v] overlay=493:0:enable='between(t,70.2,78.4)'[x]; \
 [x][11:v] overlay=493:0:enable='between(t,78.4,86.8)'[x]; \
 [x][12:v] overlay=493:0:enable='between(t,86.8,94.7)'[x]; \
-[x][2:v] overlay=493:0:enable='gt(t,94.7)' \
-" -pix_fmt yuv420p -c:a copy -t 101.8 output2.mp4
+[x][2:v] overlay=493:0:enable='gt(t,94.7)'[x]; \
+[x]fade=t=in:st=0:d=1, fade=t=out:st=97.8:d=4[x];
+[0:a] afade=t=out:st=97.8:d=4[xa]
+" -pix_fmt yuv420p \
+-map "[x]" -map "[xa]" \
+-t 101.8 output2.mp4
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
